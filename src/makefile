@@ -1,5 +1,8 @@
 build:
-	$(CC) ./main.c -o rpkg -Wall -Wextra -Wshadow -fsanitize=address
+	rm -r ../build
+	mkdir ../build
+	$(CC) ./main.c -o ../build/mpkg -Wall -Wextra -Wshadow -fsanitize=address
 run:
-	./rpkg
-
+	../build/mpkg
+clean:
+	rm -r ../build
